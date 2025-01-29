@@ -1,0 +1,21 @@
+# ninja log v6
+947	1093	1737893831412478483	cpp_oop_kursinis_v2	581358be1555a372
+1	87	1738177669165073655	build.ninja	f4d14b14bd83e596
+12	527	1738177277398250734	CMakeFiles/cpp_oop_kursinis_v2.dir/main.cpp.o	74c8cc4be850e47e
+4	81	1738177669165073655	build.ninja	f4d14b14bd83e596
+10	695	1738177669185484664	CMakeFiles/cpp_oop_kursinis_v2.dir/sistema.cpp.o	b2411bc3e099aa7d
+11	761	1738177669185662328	CMakeFiles/cpp_oop_kursinis_v2.dir/ukininkas.cpp.o	c71d94823a728277
+10	795	1738177669185188961	CMakeFiles/cpp_oop_kursinis_v2.dir/paraiska.cpp.o	5ee5f9017992fa98
+5	691	1738177715546381413	CMakeFiles/cpp_oop_kursinis_v2.dir/main.cpp.o	74c8cc4be850e47e
+6	692	1738177715547203108	CMakeFiles/cpp_oop_kursinis_v2.dir/sistema.cpp.o	b2411bc3e099aa7d
+6	753	1738177715547350397	CMakeFiles/cpp_oop_kursinis_v2.dir/ukininkas.cpp.o	c71d94823a728277
+6	779	1738177715547026902	CMakeFiles/cpp_oop_kursinis_v2.dir/paraiska.cpp.o	5ee5f9017992fa98
+8	736	1738177774300567058	CMakeFiles/cpp_oop_kursinis_v2.dir/sistema.cpp.o	b2411bc3e099aa7d
+7	737	1738177774299771321	CMakeFiles/cpp_oop_kursinis_v2.dir/main.cpp.o	74c8cc4be850e47e
+8	784	1738177774300733305	CMakeFiles/cpp_oop_kursinis_v2.dir/ukininkas.cpp.o	c71d94823a728277
+6	499	1738177911409888535	CMakeFiles/cpp_oop_kursinis_v2.dir/main.cpp.o	74c8cc4be850e47e
+6	499	1738177911410384447	CMakeFiles/cpp_oop_kursinis_v2.dir/sistema.cpp.o	b2411bc3e099aa7d
+7	541	1738177911410541487	CMakeFiles/cpp_oop_kursinis_v2.dir/vertintojas.cpp.o	bb964d4089bc7df4
+541	636	1738177911944488412	cpp_oop_kursinis_v2	e5a12c76e98c75b9
+6	628	1738179695778348585	CMakeFiles/cpp_oop_kursinis_v2.dir/vertintojas.cpp.o	bb964d4089bc7df4
+628	758	1738179696400991030	cpp_oop_kursinis_v2	e5a12c76e98c75b9
