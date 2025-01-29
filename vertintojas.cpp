@@ -27,36 +27,7 @@ void Vertintojas::prisijungti() {
 
 // Paraiškų vertinimas
 void Vertintojas::vertintiParaiska() {
-//    cout << "Vertinimas prasideda..." << endl;
-//
-//    // Nuskaityti paraiškas iš failo
-//    vector<Paraiska> paraiskos = Paraiska::nuskaitytiIsFailo("paraiskos.txt");
-//
-//    // Jei nėra paraiškų, pranešame vartotojui
-//    if (paraiskos.empty()) {
-//        cout << "Nėra paraiškų vertinimui.\n";
-//        return;
-//    }
-//
-//    // Rodome informaciją apie paraiškas
-//    for (auto& paraiska : paraiskos) {
-//        paraiska.rodytiInfo();
-//    }
-//
-//    // Tarkime, kad vertiname pirmąją paraišką pagal plotą (čia tik pavyzdys)
-//    if (!paraiskos.empty()) {
-//        if (paraiskos[0].plotas > 50) {
-//            cout << "Paraiska 1 patvirtinta!" << endl;
-//            paraiskos[0].tvirtinti(); // Pažymime paraišką kaip patvirtintą
-//        }
-//        else {
-//            cout << "Paraiska 1 atmetama." << endl;
-//        }
-//
-//        // Įrašome pakeitimus į failą
-//        paraiskos[0].iseitiIFaila("paraiskos.txt");
-//    }
- cout << "Vertinimas prasideda..." << endl;
+    cout << "Vertinimas prasideda..." << endl;
 
     // Nuskaityti paraiškas iš failo
     vector<Paraiska> paraiskos = Paraiska::nuskaitytiIsFailo("paraiskos.txt");
@@ -93,6 +64,7 @@ void Vertintojas::vertintiParaiska() {
         pasirinktaParaiska.tvirtinti();
         cout << "Paraiška patvirtinta!\n";
     } else if (veiksmas == 'a') {
+        pasirinktaParaiska.atmesti();
         cout << "Paraiška atmesta.\n";
     } else {
         cout << "Neteisingas pasirinkimas!\n";

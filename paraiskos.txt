@@ -1,5 +1,0 @@
-ads; 12345; 50; nepatvirtinta;
-ads; 12345; 30; nepatvirtinta;
-ads; 12345; 51; nepatvirtinta;
-ads; 12345; 53; nepatvirtinta;
-ads; 12345; 50; nepatvirtinta;

@@ -22,21 +22,27 @@ void Paraiska::rodytiInfo() {
 // Paraiškos patvirtinimas
 void Paraiska::tvirtinti() {
     patvirtinta = true;
+    statusas = "patvirtinta";
     cout << "Paraiška patvirtinta." << endl;
+}
+
+void Paraiska::atmesti() {
+    statusas = "atmesta";
+    cout << "Paraiška atmesta." << endl;
 }
 
 // Išsaugojimas į failą
 void Paraiska::iseitiIFaila(const string& failoPavadinimas) {
-    ofstream out(failoPavadinimas, ios::app); // Naudojame 'app' režimą, kad nepradėtume rašyti failą nuo pradžių
+    vector<Paraiska> paraiskos = nuskaitytiIsFailo(failoPavadinimas);
+    ofstream out(failoPavadinimas, ios::trunc); // Open the file in truncate mode to overwrite it
     if (out.is_open()) {
-        out << ukininkoVardas << "; " << sklypoNr << "; " << plotas << "; " << (patvirtinta ? "patvirtinta" : "nepatvirtinta") << endl;
+
+        out << ukininkoVardas << "; " << sklypoNr << "; " << plotas << "; " << statusas << endl;
         out.close();
-    }
-    else {
+    } else {
         cout << "Nepavyko atidaryti failo." << endl;
     }
 }
-
 // Nuskaityti iš failo
 vector<Paraiska> Paraiska::nuskaitytiIsFailo(const string& failoPavadinimas) {
     ifstream in(failoPavadinimas);
@@ -49,7 +55,7 @@ vector<Paraiska> Paraiska::nuskaitytiIsFailo(const string& failoPavadinimas) {
         string vardas;
         int sklypoNr;
         float plotas;
-        string patvirtinta;
+        string statusas;
 
         // Išskaidome eilutę pagal ';' ženklą
         getline(ss, vardas, ';');
@@ -57,13 +63,14 @@ vector<Paraiska> Paraiska::nuskaitytiIsFailo(const string& failoPavadinimas) {
         ss.ignore(1, ';');  // Ignoruoti tarpus po sklypoNr
         ss >> plotas;
         ss.ignore(1, ';');
-        getline(ss, patvirtinta, ';');
+        getline(ss, statusas, ';');
 
-        bool patvirtintaBool = (patvirtinta == "patvirtinta");
-
-        // Sukuriame paraišką ir pridedame ją į vektorių
+        Paraiska paraiska(vardas, sklypoNr, plotas);
+        paraiska.statusas = statusas;
+        paraiskos.push_back(paraiska);
+//        // Sukuriame paraišką ir pridedame ją į vektorių
         paraiskos.push_back(Paraiska(vardas, sklypoNr, plotas));
-        paraiskos.back().patvirtinta = patvirtintaBool;
+//        paraiskos.back().patvirtinta = patvirtintaBool;
     }
 
 

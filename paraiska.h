@@ -16,12 +16,14 @@ public:
     // Metodai
     void rodytiInfo();                    // Paraiškos informacijos rodymas
     void tvirtinti();                     // Paraiškos patvirtinimas
+    void atmesti();
     void iseitiIFaila(const string& failoPavadinimas);  // Išsaugojimas į failą
     static vector<Paraiska> nuskaitytiIsFailo(const string& failoPavadinimas); // Nuskaityti iš failo
     float plotas;
     bool patvirtinta;
     string ukininkoVardas;
     int sklypoNr;
+    std::string statusas; // "neivertinta", "patvirtinta", "atmesta"
 };
 
 #endif
